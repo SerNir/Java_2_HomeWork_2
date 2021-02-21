@@ -15,9 +15,14 @@ public class Main {
     public static void Arr(String[][] arr) throws MyArraySizeException, MyArrayDataException {
         int sum = 0;
         int a = 0;
-        if (arr.length != 4 || arr[0].length != 4) {
-            throw new MyArraySizeException("Неправильный размер массива: ожидается массив 4х4");
+        
+       for (int i = 0; i < 4; i++) {
+
+            if (arr.length != 4 || arr[i].length != 4) {
+                throw new MyArraySizeException("Неправильный размер массива: ожидается массив 4х4");
+            }
         }
+
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[0].length; j++) {
